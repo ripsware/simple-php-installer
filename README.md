@@ -20,7 +20,7 @@ To use **simple-php-installer** you need to create directory with name `installe
       |--+ <installer-source-dir>
 ```
 #### Directory Structure Description:
-- `<root-dir>` is directory that application tobe installed, it's could be anything like **htdoc**, **www**, or **htdoc/your-app/**, etc.
+- `<root-dir>` is directory that application tobe installed, it could be anything like **htdoc**, **www**, or **htdoc/your-app/**, etc.
 - `installer` location of **simple-php-installer** code.
 - `php-installer.conf.php` **simple-php-installer** configuration file
 - `<installer-source-dir>` location of installer resource, like *project configuration file*, *project source code*, *database (.sql file)*, etc.
@@ -78,7 +78,7 @@ array(
     'fields'    => array()
 )
 ```
-- `'group'` is group name for Installer Configuration it's **required** and it's could be anything, in this case **database**.
+- `'group'` is group name for Installer Configuration it's **required** and it could be anything, in this case **database**.
 - `'label'` is display text on the menu, it's **required**.
 - `'icon'` is icon for menu, it's **font awesome** class, it's **optional**.
 - `'source'` is source configuration file, it's **required**.
