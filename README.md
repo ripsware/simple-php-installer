@@ -1,7 +1,7 @@
 # simple-php-installer
 Simple installer for php project, created based on Codeigniter 3
 
-## Projecr requirement
+## Project requirement
 This project require **Codeigniter 3**, **angularjs**, and **bootstrap**
 
 ## project setup
