@@ -20,7 +20,7 @@ To use **simple-php-installer** you need to create directory with name `installe
       |--+ <installer-source-dir>
 ```
 #### Directory Structure Description:
-- `<root-dir>` is directory that application tobe installed, its can be anything like **htdoc**, **www**, or **htdoc/your-app/**, etc.
+- `<root-dir>` is directory that application tobe installed, its could be anything like **htdoc**, **www**, or **htdoc/your-app/**, etc.
 - `installer` location of **simple-php-installer** code.
 - `php-installer.conf.php` **simple-php-installer** configuration file
 - `<installer-source-dir>` location of installer resource, like *project configuration file*, *project source code*, *database (.sql file)*, etc.
@@ -55,7 +55,7 @@ array(
 	- `extract` to extract zip file
 	- `sql_query` to run sql query file
 	- `run` to run command
-- `'source'` is installer action source it can be **file**, **directory**, or **command** *(based on `'type'`)*
+- `'source'` is installer action source it could be **file**, **directory**, or **command** *(based on `'type'`)*
 - `'destination'` is the destination file or directory. This option is **optional** based on `'type'` its required when the `'type'` is `copy`, `cut`, `extract`.
 - `'configs'` is configuration for Installer Action. This option is **optional**, its usually used when the `'type'` is `sql_query`. Example `'configs'` :
 ```php
@@ -78,7 +78,7 @@ array(
     'fields'    => array()
 )
 ```
-- `'group'` is group name for Installer Configuration its **required** and its can be anything, in this case **database**.
+- `'group'` is group name for Installer Configuration its **required** and its could be anything, in this case **database**.
 - `'label'` is display text on the menu, its **required**.
 - `'icon'` is icon for menu, its **font awesome** class, its **optional**.
 - `'source'` is source configuration file, its **required**.
