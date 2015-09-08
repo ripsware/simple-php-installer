@@ -1,0 +1,32 @@
+{
+  "name": "php-installer",
+  "version": "0.0.0",
+  "authors": [
+    "ripsware <rio.prmn@gmail.com>"
+  ],
+  "description": "Multifunction PHP application installer",
+  "keywords": [
+    "PHP"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/vendors/raw/",
+    "test",
+    "tests",
+    "vendor/",
+    "installer-resources/"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.4.5",
+    "angular-motion": "~0.4.2",
+    "angular-route": "~1.4.5",
+    "angular": "~1.4.5",
+    "angular-strap": "~2.3.1",
+    "bootstrap": "~3.3.5",
+    "font-awesome": "~4.4.0",
+    "underscore": "~1.8.3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "require": {
+        "codeigniter/framework": "^3.0",
+        "phpclasses/sql-parser": ">=1.0"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http:\/\/www.phpclasses.org\/"
+        },
+        {
+            "packagist": false
+        }
+    ]
+}

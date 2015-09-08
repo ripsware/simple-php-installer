@@ -1,0 +1,192 @@
+.animation-linear(@interval:0.5s){
+  -webkit-transition: all @interval ease-in-out;
+  -moz-transition: all @interval ease-in-out;
+  -o-transition: all @interval ease-in-out;
+  transition: all @interval ease-in-out;
+}
+.datepicker {
+  min-width: 300px;
+  padding: 5px;
+
+  .btn{
+    border-color: transparent;
+    &.btn-info{
+      color: @default-forecolor !important;
+    }
+  }
+}
+.timepicker{
+  min-width: inherit !important;
+  padding: 3px;
+
+  .btn{
+    border-color: transparent;
+    min-width: 45px;
+    display: inline-block;
+  }
+}
+
+.form-control {
+  padding-right: 24px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  &[bs-datepicker]{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuNWWFMmUAAACVSURBVEhL7dNRCsIwFETRbiPryAa6/01FJ6Q4PG4xwog/Fg7FCxNIwWOM8VUYkzAmYUzCmIQxCaNcT2vt9cMe77S/YBQdIL33+a68163DKDpgV906jMv5AdpPGMU/xzt16zAKfYo7deswyhqem288QzCKhrr+zrtuHUZZw/8NfniDJ/pD3aH9hDEJYxLGJIxJGHPG8QCpBhVrbn/emQAAAABJRU5ErkJggg==') !important;
+  }
+  &[bs-timepicker]{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGCSURBVEiJ7dWxaxVBEAbw3yb5CyzEKlWIWKV4qQz2QuoEMVgF7BQkbYjYWYpYiGAlhJAmVdDGQo1WvsLGgKVFKkmhoCCEsbgNvHfunmcRAiEfTHE78813szuzmyLCSWLiRLOfCYGpfwWklGawhEG2IwyzbUXE105+7ZBTSgl38BCf8B4fMYl5XMMs7kXE86pCRPxlmq3bxSFWSjE57jZ+YLMaUyGu4RumW+urWGqtXc4iq70EcAW/sFzwbeFppZLv7R+KiGIX3cKHiNjuOrzWNj/DF9xo+0oCA7ztm3wE7zJ3DKU2HeBxR6KrKaVHI99vImJH02EP2sGlCiY1vV7CE3zGpRG7kH1HmTuGUgVDTZ+/ajsiYg97FfH5zB1DqYIhFipJurBQEii16Rx+Y7E2PAXOCn5ipu+gbeAAF3skn9ZM/N3/meQpTasedFWCZc3E78r3Wi+BEZGNvF0vsY7rWMR9vNZM/Bomanmqt+kxUkpzuKl8Xb+IiP1O/vmbfOoCfwA2SrFF8iIMgwAAAABJRU5ErkJggg==');
+  }
+}
+
+.card{
+  display: block;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: inherit;
+  font: inherit;
+
+  &.no-shadow{
+    box-shadow: none;
+    border: solid 1px #ccc;
+  }
+
+  &.empty{
+    .well();
+  }
+}
+
+.sweet-overlay {
+  z-index: @zindex-modal + 100;
+}
+
+.sweet-alert {
+  @sweet-alert-bg: #fff;
+  border-radius: @border-radius-base;
+  background-color: @sweet-alert-bg;
+  z-index: @zindex-modal + 100;
+  box-shadow: 0 0 7px #000;
+
+  .icon{
+    margin: 20px auto 30px auto;
+    &.success {
+      .fix{
+        width: 7px;
+        background-color: @sweet-alert-bg;
+        left: 27px;
+      }
+    }
+  }
+}
+
+@vtab-bg:           #333333;
+@vtab-color:        #fff;
+@vtab-selected-bg:  #F1F1F1;
+.v-tab{
+  background-color: @vtab-bg;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 2em;
+
+  &.floating{
+    position: fixed;
+    z-index: 10;
+
+    @media (max-width: @screen-xs-max) {
+      left: 0;
+      top: @header-height;
+    }
+
+  }
+
+  >.v-tab-item{
+    cursor: pointer;
+    list-style: none;
+    display: block;
+    margin: 0;
+    height: 1.5em;
+    line-height: 1.5em;
+    white-space: nowrap;
+    max-width: 100%;
+    width: 100%;
+    background-color: @vtab-bg;
+    color: darken(@vtab-color, 20%);
+    text-decoration: none;
+    .animation-linear();
+    >.icon{
+      display: inline-block;
+      width: 1.5em;
+      max-width: 1.5em;
+      text-align: center;
+      vertical-align: middle;
+      color: inherit;
+      font-size: 18px;
+    }
+    >.caption{
+      display: inline-block;
+      line-height: 1.5em;
+      vertical-align: middle;
+      color: inherit;
+      font-size: 14px;
+      background-color: inherit;
+    }
+
+    &:hover{
+      color: @vtab-color;
+      background-color: lighten(@vtab-bg, 10%);
+      position: relative;
+      >.caption{
+        background-color: @vtab-bg;
+      }
+    }
+
+    &.selected{
+      background-color: @vtab-selected-bg;
+      color: @vtab-bg;
+      &:hover{
+        background-color: darken(@vtab-selected-bg, 10%);
+        >.caption{
+          background-color: @vtab-selected-bg;
+        }
+      }
+    }
+  }
+
+  &.collapsed{
+    width: 1.5em;
+    max-width: 1.5em;
+    >.v-tab-item{
+      text-align: center;
+      overflow: visible;
+      position: relative;
+      z-index: 10;
+      >.caption{
+        position: absolute;
+        left: 3em;
+        top: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 3em;
+        height: 3em;
+        vertical-align: middle;
+        text-align: left;
+        .animation-linear();
+        width: 0;
+      }
+      &:hover{
+        box-shadow: 4px 1px 5px rgba(0,0,0,0.3);
+        >.caption{
+          width: 150px;
+          padding-right: 1.5em;
+          padding-left: 1em;
+          box-shadow: 4px 1px 5px rgba(0,0,0,0.3);
+        }
+      }
+    }
+  }
+}

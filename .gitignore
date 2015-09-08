@@ -1,0 +1,15 @@
+/uploads/
+/upload/
+/release/
+/.idea/
+/vendor/
+~*.xlsx
+*.zip
+*.7zip
+*.rar
+*.tar.gz
+*.gz
+*.tar
+/tmp/
+/resources/vendors/raw/
+/installer-resources/
