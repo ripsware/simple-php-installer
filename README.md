@@ -20,7 +20,7 @@ To use **simple-php-installer** you need to create directory with name `installe
       |--+ <installer-source-dir>
 ```
 #### Directory Structure Description:
-- `<root-dir>` is directory that application tobe installed, its could be anything like **htdoc**, **www**, or **htdoc/your-app/**, etc.
+- `<root-dir>` is directory that application tobe installed, it's could be anything like **htdoc**, **www**, or **htdoc/your-app/**, etc.
 - `installer` location of **simple-php-installer** code.
 - `php-installer.conf.php` **simple-php-installer** configuration file
 - `<installer-source-dir>` location of installer resource, like *project configuration file*, *project source code*, *database (.sql file)*, etc.
@@ -56,8 +56,8 @@ array(
 	- `sql_query` to run sql query file
 	- `run` to run command
 - `'source'` is installer action source it could be **file**, **directory**, or **command** *(based on `'type'`)*
-- `'destination'` is the destination file or directory. This option is **optional** based on `'type'` its required when the `'type'` is `copy`, `cut`, `extract`.
-- `'configs'` is configuration for Installer Action. This option is **optional**, its usually used when the `'type'` is `sql_query`. Example `'configs'` :
+- `'destination'` is the destination file or directory. This option is **optional** based on `'type'` it's required when the `'type'` is `copy`, `cut`, `extract`.
+- `'configs'` is configuration for Installer Action. This option is **optional**, it's usually used when the `'type'` is `sql_query`. Example `'configs'` :
 ```php
 array(
     'type'      => 'sql_query',
@@ -78,12 +78,12 @@ array(
     'fields'    => array()
 )
 ```
-- `'group'` is group name for Installer Configuration its **required** and its could be anything, in this case **database**.
-- `'label'` is display text on the menu, its **required**.
-- `'icon'` is icon for menu, its **font awesome** class, its **optional**.
-- `'source'` is source configuration file, its **required**.
-- `'dest'` is deployed configuration file, its **required**.
-- `'fields'` is the fields in configuration file, its **required**.
+- `'group'` is group name for Installer Configuration it's **required** and it's could be anything, in this case **database**.
+- `'label'` is display text on the menu, it's **required**.
+- `'icon'` is icon for menu, it's **font awesome** class, it's **optional**.
+- `'source'` is source configuration file, it's **required**.
+- `'dest'` is deployed configuration file, it's **required**.
+- `'fields'` is the fields in configuration file, it's **required**.
 
 #### Installer Configuration Fields
 ```php
@@ -97,17 +97,17 @@ array(
 )
 ```
 Installer configuration fields is required to generate field editor for **simple-php-installer** ui.
-- `'name'` is field name in configuraton file, its **required**.
-- `'label'` is the label that shown in **simple-php-installer** ui, its **required**.
-- `'type'` is field type, its **requied**. Field type list:
+- `'name'` is field name in configuraton file, it's **required**.
+- `'label'` is the label that shown in **simple-php-installer** ui, it's **required**.
+- `'type'` is field type, it's **requied**. Field type list:
 	- `text` for text field.
 	- `number` for number field.
 	- `password` for password field.
 	- `string_lists` for string lists.
 	- `bool` for boolean field.
 	- `select` for combobox field (***not implemented yet***).
-- `'required'` is the mark if the field is can't be empty, its **optional**.
-- `'default'` is default value for the field, its **optional**, you can also call decalered php function by using bracket `{}`, example:
+- `'required'` is the mark if the field is can't be empty, it's **optional**.
+- `'default'` is default value for the field, it's **optional**, you can also call decalered php function by using bracket `{}`, example:
 ```php
 array(
     'name'      => 'base_url',
@@ -118,7 +118,7 @@ array(
     'default'   => '{base_url("../index.php")}'
 )
 ```
-- `'readonly'` if true then the field editor will be readonly mode, its **optional**.
+- `'readonly'` if true then the field editor will be readonly mode, it's **optional**.
 
 #### Example of php-installer.conf.php
 ```php
